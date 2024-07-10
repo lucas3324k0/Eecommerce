@@ -1,0 +1,23 @@
+@import "swiper/swiper-bundle.css";
+
+.SliderBig {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderBig-container {
+  width: 80%;
+  height: 416px;
+  margin-top: 0px;
+  z-index: -9999;
+}
+
+.sliderBig-container img {
+  z-index: -9999;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

@@ -1,0 +1,42 @@
+/* CATEGORIAS PRODUTOS*/
+
+.Categories {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title-categories {
+  color: black;
+  width: 260px;
+  height: 150px;
+  background-image: linear-gradient(to bottom, var(--blue-secondary), white);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.title-categories:hover {
+  box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.041);
+  color: rgba(0, 0, 0, 0.589);
+  cursor: pointer;
+}
+
+
+.Mais-vendidos {
+  width: 79.8%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}

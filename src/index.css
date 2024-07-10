@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --blue-secondary: #ECF4FF;
+  --blue-main-color:  #0D63F3;
+}
+
+body {
+  padding-top: 4.7rem;
+  background-color: var(--blue-secondary);
+  font-family: "Montserrat", sans-serif;
+}

@@ -1,18 +1,18 @@
-const ProductDetail = (prop) => {
-  const url = "https://fakestoreapi.com/products/categories/" + category;
-  const [data, setData] = useState([]);
+// const ProductDetail = () => {
+//   const url = "https://fakestoreapi.com/products/categories/" + category;
+//   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fechData = async () => {
-      const req = await fetch(url);
-      const res = await req.json();
-      setData(res);
-    };
-    fechData();
-  }, []);
-  return { data };
-};
+//   useEffect(() => {
+//     const fechData = async () => {
+//       const req = await fetch(url);
+//       const res = await req.json();
+//       setData(res);
+//     };
+//     fechData();
+//   }, []);
+//   return { data };
+// };
 
-ProductDetail("jewelery");
+// ProductDetail("jewelery");
 
-export default ProductDetail;
+// export default ProductDetail;

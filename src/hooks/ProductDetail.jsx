@@ -10,7 +10,6 @@ const ProductDetail = (prop) => {
     };
     fechData();
   }, []);
-  console.log(data);
   return { data };
 };
 

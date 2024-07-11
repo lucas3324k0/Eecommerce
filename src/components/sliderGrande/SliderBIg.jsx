@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./SliderBig.css";
 import "swiper/swiper-bundle.css";
+
 // image
 import primeira from "../../assets/sliderGrande/image.png";
 import segunda from "../../assets/sliderGrande/image copy 2.png";

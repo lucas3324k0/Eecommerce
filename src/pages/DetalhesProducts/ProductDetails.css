@@ -73,17 +73,13 @@
   border-radius: 8px;
   color: white;
   background-color: var(--blue-main-color);
+  transition: all 0.5s;
 }
 
-.Btn-ProductsDetail {
-  border: none;
-  outline: none;
-  width: 160px;
-  height: 45px;
-  margin-right: 20px;
-  border-radius: 8px;
-  color: white;
-  background-color: var(--blue-main-color);
+.Btn-ProductsDetail:hover {
+  color: rgb(228, 228, 228);
+  background-color: #220fd4;
+  cursor: pointer;
 }
 
 input[type="number"] {

@@ -6,8 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./pages/home/Home.jsx";
 import LoginPage from "./pages/login/LoginPage.jsx";
 import CategoriesPage from "./pages/PrevCategories/CategoriesPage.jsx";
-import { CategoryContext, CategoryContextProvider } from "./context/CategoryContext.jsx";
+import {
+  CategoryContext,
+  CategoryContextProvider,
+} from "./context/CategoryContext.jsx";
 import ProductDetails from "./pages/DetalhesProducts/ProductDetails.jsx";
+import Carrinho from "./components/ModalCarrinho/Carrinho.jsx";
 
 const route = createBrowserRouter([
   {
@@ -27,9 +31,9 @@ const route = createBrowserRouter([
         element: <CategoriesPage />,
       },
       {
-        path: '/categorias/info/:id',
-        element: <ProductDetails />
-      }
+        path: "/categorias/info/:id",
+        element: <ProductDetails />,
+      },
     ],
   },
 ]);

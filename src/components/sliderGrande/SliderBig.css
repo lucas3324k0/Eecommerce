@@ -11,7 +11,7 @@
   width: 80%;
   height: 416px;
   margin-top: 0px;
-  z-index: -9999;
+  z-index: auto;
 }
 
 .sliderBig-container img {

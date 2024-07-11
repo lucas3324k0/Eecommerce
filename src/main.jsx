@@ -7,6 +7,7 @@ import { Home } from "./pages/home/Home.jsx";
 import LoginPage from "./pages/login/LoginPage.jsx";
 import CategoriesPage from "./pages/PrevCategories/CategoriesPage.jsx";
 import { CategoryContext, CategoryContextProvider } from "./context/CategoryContext.jsx";
+import ProductDetails from "./pages/DetalhesProducts/ProductDetails.jsx";
 
 const route = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const route = createBrowserRouter([
         path: "/categorias",
         element: <CategoriesPage />,
       },
+      {
+        path: '/categorias/info/:id',
+        element: <ProductDetails />
+      }
     ],
   },
 ]);

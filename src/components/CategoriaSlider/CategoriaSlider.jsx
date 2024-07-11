@@ -24,8 +24,8 @@ export const CategoriaSlider = () => {
     <>
       <div className="Categories">
         {products.length > 1 ? (
-          products.map((item) => (
-            <div key={item.id}>
+          products.map((item, index) => (
+            <div key={index}>
               <Link
                 onClick={() => setValor(item)}
                 className="title-categories"

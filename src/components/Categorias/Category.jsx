@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./Category.css";
 import Rating from "@mui/material/Rating";
 import ProductList from "../../hooks/ProductList";
-import { CategoryContext } from "../../context/CategoryContext";
 import { CategoriaSlider } from "../CategoriaSlider/CategoriaSlider";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const { data } = ProductList();
@@ -18,9 +17,9 @@ const Category = () => {
       </div>
       {/* PRODUTOS  CONTAINERS */}
       <div className="products">
-        {data.map((item) =>
+        {data.map((item, index) =>
           item.rating.count >= 400 ? (
-            <div className="product-container" key={item.id}>
+            <div className="product-container" key={index}>
               <div className="Product-img">
                 <img src={item.image} />
               </div>
@@ -39,7 +38,9 @@ const Category = () => {
               </div>
 
               <div className="product-button">
-                <button className="buy">Comprar</button>
+                <Link to={`/categorias/info/${item.id}`} className="buy">
+                  Comprar
+                </Link>
                 <Link>
                   <AddShoppingCartIcon />
                 </Link>

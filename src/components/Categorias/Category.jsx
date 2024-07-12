@@ -9,7 +9,7 @@ import { MeuCartContext } from "../../context/CartContext";
 
 const Category = () => {
   const { data } = ProductList();
-  const { addToCart } = useContext(MeuCartContext)
+  const { addToCart } = useContext(MeuCartContext);
 
   return (
     <div className="Category-container">
@@ -43,7 +43,7 @@ const Category = () => {
                 <Link to={`/categorias/info/${item.id}`} className="buy">
                   Comprar
                 </Link>
-                <Link onClick={() => addToCart(item.id)}>
+                <Link onClick={() => addToCart(item)}>
                   <AddShoppingCartIcon />
                 </Link>
               </div>

@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Carrinho.css";
 import { MeuCartContext } from "../../context/CartContext";
 
 const Carrinho = ({ isOpen, onClose }) => {
   const { cart } = useContext(MeuCartContext);
-  console.log(cart);
+
   if (!isOpen) return null;
 
   return (
@@ -14,18 +14,33 @@ const Carrinho = ({ isOpen, onClose }) => {
           Fechar
         </button>
 
-        {cart.map((item) => {
+        {cart.map((item, index) => {
           return (
-            <div className="ProductsCart" key={item.id}>
-              <div className="ProductsCart-Image">
-                <img src={item.image} alt="" />
-              </div>
+            <div className="ProductsCart" key={index}>
+              <h2>{item.title}</h2>
+
               <div className="ProductsCart-Info">
-                <h2>{item.title}</h2>
-                {/* <p>{item.description}</p> */}
-                <strong>
-                  <p>R$ {item.price}</p>
-                </strong>
+                <div className="ProductsCart-Image">
+                  <img src={item.image} alt="" />
+                </div>
+                {console.log(item.id === item.id ? "sim" : "nop")}
+                <div className="Info">
+                  <p>
+                    <strong>Categoria:</strong> {item.category}
+                  </p>
+                  <p>
+                    <strong>R$ </strong>
+                    {(item.price).toFixed(2)}
+                  </p>{" "}
+                  <div className="ProductsCart-button">
+                    <input
+                      type="number"
+                      value={''}
+                      onClick={''}
+                      className="input"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           );

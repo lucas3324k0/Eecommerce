@@ -5,9 +5,11 @@ import Rating from "@mui/material/Rating";
 import ProductList from "../../hooks/ProductList";
 import { CategoriaSlider } from "../CategoriaSlider/CategoriaSlider";
 import { Link } from "react-router-dom";
+import { MeuCartContext } from "../../context/CartContext";
 
 const Category = () => {
   const { data } = ProductList();
+  const { addToCart } = useContext(MeuCartContext)
 
   return (
     <div className="Category-container">
@@ -41,7 +43,7 @@ const Category = () => {
                 <Link to={`/categorias/info/${item.id}`} className="buy">
                   Comprar
                 </Link>
-                <Link>
+                <Link onClick={() => addToCart(item.id)}>
                   <AddShoppingCartIcon />
                 </Link>
               </div>

@@ -18,7 +18,12 @@ const ProductDetails = () => {
   quant == 0 ? setQuant(1) : null;
 
   if (!product) {
-    return <div>Loading...</div>;
+    return (
+      <div className="Carregando-Details">
+        {" "}
+        <h2>Carregando....</h2>
+      </div>
+    );
   }
   return (
     <div

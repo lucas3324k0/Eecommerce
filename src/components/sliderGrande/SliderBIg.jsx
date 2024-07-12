@@ -10,6 +10,7 @@ import terceira from "../../assets/sliderGrande/image copy.png";
 import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 
+
 const SliderBIg = () => {
   const [slider, setSlider] = useState(1);
   const data = [

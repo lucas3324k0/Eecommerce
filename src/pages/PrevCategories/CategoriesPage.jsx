@@ -1,16 +1,17 @@
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Rating from "@mui/material/Rating";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CategoriaSlider } from "../../components/CategoriaSlider/CategoriaSlider";
 import ProductList from "../../hooks/ProductList";
 import { CategoryContext } from "../../context/CategoryContext";
 import { Link } from "react-router-dom";
+import { MeuCartContext } from "../../context/CartContext";
 
 const CategoriesPage = () => {
   const { valor, setValor } = useContext(CategoryContext);
   const [productsFire, setProductsFire] = useState("");
+  const { addToCart } = useContext(MeuCartContext);
   const { data } = ProductList();
-  console.log(valor);
 
   return (
     <div className="Category-container">
@@ -45,7 +46,7 @@ const CategoriesPage = () => {
                 <Link to={`info/${item.id}`} className="buy">
                   Comprar
                 </Link>
-                <Link>
+                <Link onClick={() => addToCart(item.id)}>
                   <AddShoppingCartIcon />
                 </Link>
               </div>

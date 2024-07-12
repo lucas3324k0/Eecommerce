@@ -1,14 +1,10 @@
-import React from "react";
-import GetCart from "../../hooks/HookCart/GetCart";
-import ProductList from "../../hooks/ProductList";
+import { useContext } from "react";
 import "./Carrinho.css";
-import { useParams } from "react-router-dom";
+import { MeuCartContext } from "../../context/CartContext";
 
 const Carrinho = ({ isOpen, onClose }) => {
-    const { id } = useParams()
-  const { ProductCart } = GetCart();
-  const { data } = ProductList();
-
+  const { cart } = useContext(MeuCartContext);
+  console.log(cart);
   if (!isOpen) return null;
 
   return (
@@ -18,22 +14,15 @@ const Carrinho = ({ isOpen, onClose }) => {
           Fechar
         </button>
 
-        {ProductCart.map((item) => {
-          const productDetails = data.find(
-            (product) => product.id === item.productId
-          );
-
-          if (!productDetails) return null;
-
+        {cart.map((item) => {
           return (
-            <div className="ProductsCart" key={item.productId}>
-              {console.log(productDetails.id)}
+            <div className="ProductsCart" key={item.id}>
               <div className="ProductsCart-Image">
-                <img src={productDetails.image} alt="" />
+                <img src={item.image} alt="" />
               </div>
               <div className="ProductsCart-Info">
-                <h2>{productDetails.title}</h2>
-                <p>{productDetails.description}</p>
+                <h2>{item.title}</h2>
+                {/* <p>{item.description}</p> */}
                 <strong>
                   <p>R$ {item.price}</p>
                 </strong>

@@ -1,9 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CategoryContext = createContext();
 
 export const CategoryContextProvider = ({ children }) => {
-  const [valor, setValor] = useState('');
+  const [valor, setValor] = useState("");
 
   return (
     <CategoryContext.Provider value={{ valor, setValor }}>

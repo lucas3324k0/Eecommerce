@@ -4,14 +4,13 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./pages/home/Home.jsx";
-import LoginPage from "./pages/login/LoginPage.jsx";
 import CategoriesPage from "./pages/PrevCategories/CategoriesPage.jsx";
-import {
-  CategoryContext,
-  CategoryContextProvider,
-} from "./context/CategoryContext.jsx";
+import { CategoryContextProvider } from "./context/CategoryContext.jsx";
 import ProductDetails from "./pages/DetalhesProducts/ProductDetails.jsx";
-import Carrinho from "./components/ModalCarrinho/Carrinho.jsx";
+import {
+  MeuCartContext,
+  MeuCartContextProvider,
+} from "./context/CartContext.jsx";
 
 const route = createBrowserRouter([
   {
@@ -22,10 +21,7 @@ const route = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/login",
-        element: <LoginPage />,
-      },
+
       {
         path: "/categorias",
         element: <CategoriesPage />,
@@ -41,7 +37,9 @@ const route = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CategoryContextProvider>
-      <RouterProvider router={route} />
+      <MeuCartContextProvider>
+        <RouterProvider router={route} />
+      </MeuCartContextProvider>
     </CategoryContextProvider>
   </React.StrictMode>
 );

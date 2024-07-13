@@ -6,7 +6,11 @@ export const MeuCartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (products) => {
-    return setCart([...cart, products]);
+    const addToCartVerific = cart.find((item) => item.id == products.id);
+    if (addToCartVerific) {
+    } else {
+    }
+    // return ;
   };
 
   const removeFromCart = (productId) => {

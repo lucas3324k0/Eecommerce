@@ -23,22 +23,25 @@ const Carrinho = ({ isOpen, onClose }) => {
                 <div className="ProductsCart-Image">
                   <img src={item.image} alt="" />
                 </div>
-                {console.log(item.id === item.id ? "sim" : "nop")}
+
                 <div className="Info">
                   <p>
                     <strong>Categoria:</strong> {item.category}
                   </p>
                   <p>
                     <strong>R$ </strong>
-                    {(item.price).toFixed(2)}
+                    {item.price.toFixed(2)}
                   </p>{" "}
                   <div className="ProductsCart-button">
                     <input
                       type="number"
-                      value={''}
-                      onClick={''}
+                      value={item.quantity}
                       className="input"
+                      disabled
                     />
+                  </div>
+                  <div className="ProductsCart-button">
+                    <input type="submit" className="buy"  value='Finalizar compra'/>
                   </div>
                 </div>
               </div>

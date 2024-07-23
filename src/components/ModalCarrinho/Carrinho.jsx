@@ -30,8 +30,8 @@ const Carrinho = ({ isOpen, onClose }) => {
                   </p>
                   <p>
                     <strong>R$ </strong>
-                    {item.price.toFixed(2)}
-                  </p>{" "}
+                    {(item.price * item.quantity).toFixed(2)}
+                  </p>
                   <div className="ProductsCart-button">
                     <input
                       type="number"
@@ -41,13 +41,20 @@ const Carrinho = ({ isOpen, onClose }) => {
                     />
                   </div>
                   <div className="ProductsCart-button">
-                    <input type="submit" className="buy"  value='Finalizar compra'/>
+                    <input
+                      type="submit"
+                      className="buy"
+                      value="Finalizar compra"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           );
         })}
+        <div className="View-price-container">
+          {}
+        </div>
       </div>
     </div>
   );

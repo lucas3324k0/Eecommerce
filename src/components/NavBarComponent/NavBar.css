@@ -17,6 +17,15 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  /* border: 1px solid red; */
+}
+
+.header-links-btn {
+  width: 30%;
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-favorite,
@@ -102,4 +111,9 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to left, #4d5ef6, #f64d4d);
+  
+}
+
+.logoLink {
+  margin-right: 50px;
 }

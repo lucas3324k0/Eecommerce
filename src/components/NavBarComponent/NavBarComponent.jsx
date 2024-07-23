@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <>
       <div className="header">
-        <div className="header-links">
+        <div className="header-links-btn">
           <Link to={"/"}>
             {" "}
             <img
@@ -26,11 +26,8 @@ const NavBar = () => {
               alt="Logo"
             />
           </Link>
-
-          <button className="header-catalog">
-            <MenuIcon /> Catalogo
-          </button>
-
+        </div>
+        <div className="header-links">
           <div className="header-search">
             <input type="text" placeholder="Pesquisar produtos" />
             <button className="header-search-sumbit">

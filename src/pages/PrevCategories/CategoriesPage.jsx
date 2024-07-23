@@ -46,7 +46,7 @@ const CategoriesPage = () => {
                 <Link to={`info/${item.id}`} className="buy">
                   Comprar
                 </Link>
-                <Link onClick={() => addToCart(item.id)}>
+                <Link onClick={() => addToCart(item)}>
                   <AddShoppingCartIcon />
                 </Link>
               </div>

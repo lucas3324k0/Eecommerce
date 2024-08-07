@@ -7,10 +7,8 @@ import { Home } from "./pages/home/Home.jsx";
 import CategoriesPage from "./pages/PrevCategories/CategoriesPage.jsx";
 import { CategoryContextProvider } from "./context/CategoryContext.jsx";
 import ProductDetails from "./pages/DetalhesProducts/ProductDetails.jsx";
-import {
-  MeuCartContext,
-  MeuCartContextProvider,
-} from "./context/CartContext.jsx";
+import { MeuCartContextProvider } from "./context/CartContext.jsx";
+import Search from "./components/SearchComponent/Search.jsx";
 
 const route = createBrowserRouter([
   {
@@ -29,6 +27,10 @@ const route = createBrowserRouter([
       {
         path: "/categorias/info/:id",
         element: <ProductDetails />,
+      },
+      {
+        path: "search",
+        element: <Search />,
       },
     ],
   },

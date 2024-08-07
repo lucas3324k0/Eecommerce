@@ -7,8 +7,10 @@ import { CategoriaSlider } from "../CategoriaSlider/CategoriaSlider";
 import { Link } from "react-router-dom";
 import { MeuCartContext } from "../../context/CartContext";
 
+const url = "https://fakestoreapi.com/products";
+
 const Category = () => {
-  const { data } = ProductList();
+  const { data } = ProductList(url);
   const { addToCart } = useContext(MeuCartContext);
 
   return (

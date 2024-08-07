@@ -7,11 +7,12 @@ import { CategoryContext } from "../../context/CategoryContext";
 import { Link } from "react-router-dom";
 import { MeuCartContext } from "../../context/CartContext";
 
+const url = "https://fakestoreapi.com/products";
+
 const CategoriesPage = () => {
-  const { valor, setValor } = useContext(CategoryContext);
-  const [productsFire, setProductsFire] = useState("");
+  const { valor } = useContext(CategoryContext);
   const { addToCart } = useContext(MeuCartContext);
-  const { data } = ProductList();
+  const { data } = ProductList(url);
 
   return (
     <div className="Category-container">

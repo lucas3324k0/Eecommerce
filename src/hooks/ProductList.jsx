@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import Category from "../components/Categorias/Category";
 
-const url = "https://fakestoreapi.com/products";
-const ProductList = () => {
+const ProductList = (url) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,8 +10,8 @@ const ProductList = () => {
       setData(res);
     };
     fechData();
-  }, []);
-  return { data }
+  }, [url]);
+  return { data };
 };
 
 export default ProductList;

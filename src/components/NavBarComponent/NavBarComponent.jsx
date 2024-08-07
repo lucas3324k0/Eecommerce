@@ -6,13 +6,20 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SearchIcon from "@mui/icons-material/Search";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import Carrinho from "../ModalCarrinho/Carrinho";
+import { MeuCartContext } from "../../context/CartContext";
 
 const NavBar = () => {
+  const { conta } = useContext(MeuCartContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('Mens Casual Slim Fit');
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate(`/search?q=${query}`);
+  };
 
   return (
     <>
@@ -29,8 +36,17 @@ const NavBar = () => {
         </div>
         <div className="header-links">
           <div className="header-search">
-            <input type="text" placeholder="Pesquisar produtos" />
-            <button className="header-search-sumbit">
+            <input
+              type="text"
+              placeholder="Pesquisar produtos"
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button
+              className="header-search-sumbit"
+              onClick={() => {
+                handleSubmit();
+              }}
+            >
               <SearchIcon className="search-icon" />
             </button>
           </div>
@@ -39,6 +55,9 @@ const NavBar = () => {
             <FavoriteBorderIcon />
           </button>
           <button onClick={() => setIsOpen(true)} className="header-cart">
+            {conta === 0 ? null : (
+              <h4 className="count-products-cart">{conta}</h4>
+            )}
             <ShoppingCartIcon />
           </button>
 

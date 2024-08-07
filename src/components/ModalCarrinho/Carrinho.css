@@ -59,7 +59,6 @@
   margin-top: 0.5rem;
   box-shadow: 0px 0px 10px rgba(95, 95, 95, 0.164);
   scrollbar-width: 2;
-  
 
   & h2 {
     display: -webkit-box;
@@ -96,6 +95,33 @@
   align-items: center;
   width: 100%;
   padding-left: 0.1rem;
+  font-size: 14px;
+}
+
+.ProductsCart-button .del {
+  border: 1px solid rgba(212, 212, 212, 0.295);
+  border: none;
+  background-color: #ff4d4d;
+  width: 40px;
+  height: 31.6px;
+  padding-inline: 20px;
+  padding-block: 8px;
+  border-radius: 0px 5px 5px 0px;
+  margin-top: 8.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ProductsCart-button .del:hover {
+  background-color: #ff4d4dcc;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ProductsCart-button .del img {
+  width: 25px;
 }
 
 .ProductsCart-button .input {
@@ -109,24 +135,15 @@
   align-items: center;
 }
 
-.ProductsCart-button a {
-  font-size: 20px;
-  width: 10px;
-  height: 10px;
-}
-
-.ProductsCart-button a:hover {
-  cursor: pointer;
-}
-
 /*  BOTAO COMPRAR */
 .ProductsCart-button .buy {
   width: 200px;
+  height: 15px;
   padding-inline: 20px;
   padding-block: 8px;
-  border-radius: 5px;
+  border-radius: 5px 0px 0px 5px;
   border: 1px solid rgb(211, 211, 211);
   color: white;
   background-color: var(--blue-main-color);
-  margin-top: 9px;
+  margin-top: 8px;
 }

@@ -1,0 +1,56 @@
+.View-price-container {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 106%;
+  height: 150px;
+  background-color: white;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.164);
+  padding: 0px;
+  padding-left: 8px;
+  margin: 0;
+  z-index: 99999;
+}
+
+.Precos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.info-price {
+  width: 85%;
+}
+
+.Precos-container .btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+  padding-right: 20px;
+}
+
+.Precos-container  .btn-div button {
+  padding-inline: 100px;
+  padding-block: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid rgb(196, 196, 196);
+  background-color: var(--blue-main-color);
+  color: white;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.Precos-container  .btn-div button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.767);
+  transition: all 0.3s;
+}

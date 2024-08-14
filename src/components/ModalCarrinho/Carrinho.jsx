@@ -6,36 +6,13 @@ import { Link } from "react-router-dom";
 
 const Carrinho = ({ isOpen, onClose }) => {
   const { cart, delItemCart } = useContext(MeuCartContext);
-  const cartRef = useRef(null);
-
-  useEffect(() => {
-    console.log("atualizou");
-  }, [cart]);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (cartRef.current && !cartRef.current.contains(event.target)) {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   return (
     <>
       <div className="Cart-container">
-        <div className="Cart" ref={cartRef}>
+        <div className="Cart">
           <button className="close-button" onClick={onClose}>
             Fechar
           </button>

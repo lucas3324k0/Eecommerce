@@ -14,11 +14,13 @@ import { MeuCartContext } from "../../context/CartContext";
 const NavBar = () => {
   const { conta } = useContext(MeuCartContext);
   const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('Mens Casual Slim Fit');
-  const navigate = useNavigate();
+  const [query, setQuery] = useState(""); // Gerencia o estado da consulta
+  const navigate = useNavigate(); // Hook para navegação programática
 
   const handleSubmit = () => {
-    navigate(`/search?q=${query}`);
+    if (query.trim()) {
+      navigate(`/search?name=${encodeURIComponent(query.trim())}`);
+    }
   };
 
   return (
@@ -51,9 +53,6 @@ const NavBar = () => {
             </button>
           </div>
 
-          <button className="header-favorite">
-            <FavoriteBorderIcon />
-          </button>
           <button onClick={() => setIsOpen(true)} className="header-cart">
             {conta === 0 ? null : (
               <h4 className="count-products-cart">{conta}</h4>

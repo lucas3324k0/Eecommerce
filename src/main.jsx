@@ -9,6 +9,7 @@ import { CategoryContextProvider } from "./context/CategoryContext.jsx";
 import ProductDetails from "./pages/DetalhesProducts/ProductDetails.jsx";
 import { MeuCartContextProvider } from "./context/CartContext.jsx";
 import Search from "./components/SearchComponent/Search.jsx";
+import Login from "./pages/LogCadastro/Login.jsx";
 
 const route = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const route = createBrowserRouter([
         path: "search",
         element: <Search />,
       },
+      {
+        path: "/login",
+        element: <Login />
+      }
     ],
   },
 ]);

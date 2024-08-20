@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.containerLogin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--blue-secondary);
+  z-index: 999999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerLogin form {
+  width: 30rem;
+  height: 50vh;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}
+
+label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.containerLogin form input[type="text"] {
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 5px;
+}
+
+.cadastro {
+  width: 82%;
+  display: flex;
+  align-items: center;
+  text-align: end;
+}
+
+.cadastro .ModificarSenha {
+  font-weight: 500;
+  font-size: 15px;
+  width: 150px;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+.cadastro .ModificarSenha:hover {
+  color: rgba(0, 0, 0, 0.452);
+  transition: all 0.3s;
+}
+
+.containerLogin form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SubmitBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.containerLogin form .cadastrar,
+.login {
+  margin-top: 0px;
+  width: 198px;
+  height: 6vh;
+  font-size: 15px;
+  color: white;
+  border: 1px solid rgb(189, 189, 189);
+  background-color: rgb(64, 89, 233);
+}
+
+
+.cadastrarUser {
+  margin-top: 0px;
+  width: 82%;
+  height: 6vh;
+  font-size: 15px;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid rgb(189, 189, 189);
+  background-color: rgb(64, 89, 233);
+}
+
+.cadastrar {
+  margin-left: 0px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.login {
+  border-radius: 4px 0px 0px 4px;
+  margin-right: 0px;
+}
+
+.containerLogin form input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgba(73, 106, 255, 0.904);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.233);
+  transition: all 0.3s;
+}
+
+.Logo-div {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}

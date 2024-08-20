@@ -60,9 +60,9 @@ const NavBar = () => {
             <ShoppingCartIcon />
           </button>
 
-          <button className="header-sign-in">
+          <Link className="header-sign-in" to={"/login"}>
             <PersonOutlineIcon />
-          </button>
+          </Link>
         </div>
       </div>
       <Carrinho isOpen={isOpen} onClose={() => setIsOpen(false)} />

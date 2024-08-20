@@ -78,7 +78,7 @@ label {
 .login {
   margin-top: 0px;
   width: 198px;
-  height: 6vh;
+  height: 2.5rem;
   font-size: 15px;
   color: white;
   border: 1px solid rgb(189, 189, 189);
@@ -89,7 +89,7 @@ label {
 .cadastrarUser {
   margin-top: 0px;
   width: 82%;
-  height: 6vh;
+  height: 2.5rem;
   font-size: 15px;
   color: white;
   border-radius: 4px;

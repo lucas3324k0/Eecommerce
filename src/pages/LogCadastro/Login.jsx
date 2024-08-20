@@ -6,9 +6,21 @@ import { useState } from "react";
 const Login = () => {
   const [cadastro, setCadastro] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const infoLogin = {
+      "email": "john@gmail.com",
+      "username": "johnd",
+      "password": "m38rmF$",
+    }
+
+
+  };
+
   return (
     <div className="containerLogin">
-      <form onSubmit={"s"}>
+      <form onSubmit={handleSubmit}>
         {cadastro === true ? (
           <>
             <div className="Logo-div">
